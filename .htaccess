@@ -29,6 +29,6 @@ RewriteRule ^([^\.]+)$ $1.php [NC,L]
 </FilesMatch>
 
 # Permitir archivos públicos
-<Directory admin>
-    Allow from all
-</Directory>
+# <Directory admin>
+#     Allow from all
+# </Directory>

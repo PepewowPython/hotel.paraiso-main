@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   <script src="js/bootstrap.mim.js"></script>
+    <title>Hotel Paraiso - Inicio de Sesión</title>
    <link rel="stylesheet" type="text/css" href="style/estilos.css">
-   <script src="javascript/javascript.js"></script>
 
 
    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -15,7 +13,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 </head>
-<body>|
+<body>
 <div class="container">
 	<div class="d-flex justify-content-left h-100">
 		<div class="card">
@@ -28,7 +26,7 @@
 				</div>
 			</div>
 			<div class="card-body">
-				<form action="admin/index.html" method="POST">
+				<form action="admin/index.html" method="GET">
                 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">

@@ -1,0 +1,35 @@
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node modules (si lo necesitas)
+node_modules/
+npm-debug.log
+
+# Composer (si lo necesitas)
+vendor/
+composer.lock
+
+# Archivos temporales
+*.tmp
+*.temp
+.cache/
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# Archivos del sistema
+.gitkeep

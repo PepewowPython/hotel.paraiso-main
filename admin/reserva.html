@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Reservar - Hotel Paraiso</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    .reservation-hero {
+      position: relative;
+      background: linear-gradient(rgba(78,115,223,0.7), rgba(78,115,223,0.7)),
+        url("https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1920") center center no-repeat;
+      background-size: cover;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+    .reservation-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .reservation-hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .reservation-card {
+      max-width: 600px;
+      margin: -100px auto 0 auto; 
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.15);
+      overflow: hidden;
+      animation: slideUp 1s ease-out;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .reservation-card .card-header {
+      background: #4e73df; /* Color primario asignado directamente */
+      padding: 1.5rem;
+      text-align: center;
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .reservation-card .card-body {
+      padding: 2rem;
+    }
+    .reservation-card .form-group label {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .reservation-card .btn-submit {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .reservation-card .btn-submit:hover {
+      background-color: #375a9a;
+    }
+
+    .reservation-section {
+      padding: 6rem 1rem 3rem 1rem;
+      background-color: #f1f3f8;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-hotel"></i> Hotel Paraiso 
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="reserva.html">Reservar</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Sobre el hotel</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="reservation-hero">
+    <div class="container">
+      <h1>Reserva tu Estancia</h1>
+      <p>Disfruta de la mejor experiencia en Hotel Paraiso</p>
+    </div>
+  </header>
+  
+  <section class="reservation-section">
+    <div class="container">
+      <div class="reservation-card">
+        <div class="card-header">
+          Formulario de Reserva
+        </div>
+        <div class="card-body">
+          <form id="reservationForm">
+            <div class="form-group">
+              <label for="checkIn">Fecha de Entrada</label>
+              <input type="date" id="checkIn" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="checkOut">Fecha de Salida</label>
+              <input type="date" id="checkOut" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="roomType">Tipo de Habitación</label>
+              <select id="roomType" class="form-control" required>
+                <option value="" disabled selected>Elegir...</option>
+                <option value="standard">Estándar</option>
+                <option value="deluxe">Deluxe</option>
+                <option value="suite">Suite</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Servicios Adicionales</label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="breakfast" value="desayuno">
+                <label class="form-check-label" for="breakfast">Desayuno incluido</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="airport" value="traslado">
+                <label class="form-check-label" for="airport">Traslado al aeropuerto</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="extraBed" value="camaExtra">
+                <label class="form-check-label" for="extraBed">Cama extra</label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">Reservar Ahora</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="bg-white text-center py-3 shadow">
+    <div class="container">
+      <span class="text-muted">&copy; Hotel Paraiso 2026</span>
+    </div>
+  </footer >
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Se conservó únicamente la lógica de envío del formulario
+    document.getElementById("reservationForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("¡Reserva realizada exitosamente!");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
